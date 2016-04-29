@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>msbotframework4j-sample</artifactId>
+    <groupId>org.msbotframework4j</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>msbotframework4j-sample-echo</artifactId>
+  <packaging>jar</packaging>
+
+  <name>Microsoft Bot Framework 4J Echo Bot Sample</name>
+
+  <developers>
+    <developer>
+      <id>mkanev</id>
+      <name>Maksim Kanev</name>
+      <email>maksim.kanev@gmail.com</email>
+      <organization>WaveAccess LLC</organization>
+      <organizationUrl>http://www.wave-access.com</organizationUrl>
+      <roles>
+        <role>Software Engineer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.msbotframework4j</groupId>
+      <artifactId>msbotframework4j-builder</artifactId>
+    </dependency>
+  </dependencies>
+
+
+</project>

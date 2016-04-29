@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.msbotframework4j</groupId>
+  <artifactId>msbotframework4j-build</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+
+  <name>Microsoft Bot Framework 4J Build</name>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>mkanev</id>
+      <name>Maksim Kanev</name>
+      <email>maksim.kanev@gmail.com</email>
+      <organization>WaveAccess LLC</organization>
+      <organizationUrl>http://www.wave-access.com</organizationUrl>
+      <roles>
+        <role>Software Engineer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>msbotframework4j-parent</module>
+        <module>msbotframework4j-dependencies</module>
+        <module>msbotframework4j-core</module>
+        <module>msbotframework4j-logging</module>
+        <module>msbotframework4j-connector</module>
+        <module>msbotframework4j-builder</module>
+        <module>msbotframework4j-sample</module>
+      </modules>
+    </profile>
+  </profiles>
+
+</project>
