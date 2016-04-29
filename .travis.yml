@@ -4,4 +4,4 @@ jdk:
   - oraclejdk7
 sudo: false
 install: true
-script: mvn clean install -q -nsu
+script: mvn test
