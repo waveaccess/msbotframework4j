@@ -6,7 +6,7 @@ MSBotFramework4j project contains libraries that we rely on in our Java-based Bo
 
 Requires JDK 1.7 or higher.
 
-# Latest Release
+### Latest Release
 
 The most recent release is MSBotFramework4j 1.0, released on ...
 
@@ -28,6 +28,6 @@ dependencies {
 }
 ```
 
-# Snapshots
+### Snapshots
 
 Snapshots of MSBotFramework4j built from the `develop` branch are available through Maven using version `1.1-SNAPSHOT`.
