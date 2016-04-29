@@ -30,6 +30,13 @@
     </developer>
   </developers>
 
+  <distributionManagement>
+    <site>
+      <id>msbotframework4j.org</id>
+      <url>scp://www.msbotframework4j.org</url>
+    </site>
+  </distributionManagement>
+
   <repositories>
     <repository>
       <id>sonatype-nexus-snapshots</id>
@@ -78,6 +85,7 @@
     <apache.commons.configuration.version>2.0</apache.commons.configuration.version>
     <apache.commons.beanutils.version>1.9.2</apache.commons.beanutils.version>
     <apache.commons.logging.version>1.2</apache.commons.logging.version>
+    <apache.httpcore.version>4.4.4</apache.httpcore.version>
     <apache.httpclient.version>4.5.1</apache.httpclient.version>
     <apache.httpasyncclient.version>4.1.1</apache.httpasyncclient.version>
     <jackson.version>2.7.3</jackson.version>
@@ -208,12 +216,29 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
 
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore</artifactId>
+        <version>${apache.httpcore.version}</version>
+      </dependency>
+
+
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpasyncclient</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+          </exclusion>
+        </exclusions>
         <version>${apache.httpasyncclient.version}</version>
       </dependency>
 

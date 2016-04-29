@@ -12,6 +12,12 @@
 
   <name>Microsoft Bot Framework 4J Build</name>
 
+  <scm>
+    <connection>scm:git:git@github.com:waveaccess/msbotframework4j.git</connection>
+    <developerConnection>scm:git:git@github.com:waveaccess/msbotframework4j.git</developerConnection>
+    <url>git@github.com:waveaccess/msbotframework4j.git</url>
+  </scm>
+
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -41,6 +47,10 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
+    <site>
+      <id>msbotframework4j.org</id>
+      <url>scp://www.msbotframework4j.org</url>
+    </site>
   </distributionManagement>
 
   <profiles>
@@ -50,8 +60,8 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
-        <module>msbotframework4j-parent</module>
         <module>msbotframework4j-dependencies</module>
+        <module>msbotframework4j-parent</module>
         <module>msbotframework4j-core</module>
         <module>msbotframework4j-logging</module>
         <module>msbotframework4j-connector</module>
