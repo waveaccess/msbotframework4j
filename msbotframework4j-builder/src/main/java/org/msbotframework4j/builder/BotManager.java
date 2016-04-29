@@ -29,7 +29,7 @@ public class BotManager {
   public Bot load() {
     String botClassName = null;
     try {
-      FileBasedConfigurationBuilder<FileBasedConfiguration> builder = new FileBasedConfigurationBuilder<>(PropertiesConfiguration.class);
+      FileBasedConfigurationBuilder<FileBasedConfiguration> builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class);
       builder.configure(
           params.fileBased()
               .setFileName("bot.properties")
