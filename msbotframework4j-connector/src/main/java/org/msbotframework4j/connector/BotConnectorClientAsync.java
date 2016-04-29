@@ -1,5 +1,7 @@
 package org.msbotframework4j.connector;
 
+import com.google.common.base.Optional;
+
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.request.GetRequest;
@@ -9,14 +11,12 @@ import org.apache.http.HttpHeaders;
 import org.apache.http.HttpStatus;
 import org.apache.http.entity.ContentType;
 import org.msbotframework4j.core.common.Const;
-import org.msbotframework4j.logging.BotLogSeverity;
-import org.msbotframework4j.logging.BotLogger;
 import org.msbotframework4j.core.model.BotData;
 import org.msbotframework4j.core.model.Error;
 import org.msbotframework4j.core.model.GenericApiEntity;
 import org.msbotframework4j.core.model.Message;
-
-import java.util.Optional;
+import org.msbotframework4j.logging.BotLogSeverity;
+import org.msbotframework4j.logging.BotLogger;
 
 /**
  * {@link BotConnectorClient} implementation for asynchronous communications with BotConnector API
@@ -49,7 +49,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't get BotData record for the user", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 
@@ -72,7 +72,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't update the bot user data", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 
@@ -93,7 +93,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't get the BotData record for the conversation", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 
@@ -116,7 +116,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't update the bot conversation data", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 
@@ -139,7 +139,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't get the BotData record for the user in the conversation", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 
@@ -164,7 +164,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't update the bot user in a conversation data", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 
@@ -179,7 +179,7 @@ class BotConnectorClientAsync extends AbstractBotConnectorClient implements BotC
       return Optional.of(response.getBody());
     } catch (Exception ex) {
       logger.error("Couldn't communicate with BotConnector", ex);
-      return Optional.empty();
+      return Optional.absent();
     }
   }
 

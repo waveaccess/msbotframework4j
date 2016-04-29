@@ -1,9 +1,10 @@
 package org.msbotframework4j.connector;
 
+import com.google.common.base.Optional;
+
 import org.msbotframework4j.core.model.BotData;
 import org.msbotframework4j.core.model.Message;
 
-import java.util.Optional;
 
 /**
  * BotConnector client interfaces. Might be used to asynchronously communicate with users.
