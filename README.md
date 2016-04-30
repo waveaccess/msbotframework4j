@@ -1,5 +1,7 @@
 # MSBotFramework4j: Java Library for Microsoft BotFramework
 
+[![Join the chat at https://gitter.im/waveaccess/msbotframework4j](https://badges.gitter.im/waveaccess/msbotframework4j.svg)](https://gitter.im/waveaccess/msbotframework4j?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/waveaccess/msbotframework4j.svg?branch=master)](https://travis-ci.org/waveaccess/msbotframework4j)
 
 MSBotFramework4j project contains libraries that we rely on in our Java-based Bot projects: REST models, logging system, REST API connector and Bot builder.
