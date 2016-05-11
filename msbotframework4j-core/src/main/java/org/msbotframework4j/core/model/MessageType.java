@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public enum MessageType {
   /**
-   * a simple communication between a user <-> bot
+   * a simple communication between a user &lt;-&gt; bot
    */
   MESSAGE,
   /**
