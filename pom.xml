@@ -6,17 +6,11 @@
 
   <groupId>org.msbotframework4j</groupId>
   <artifactId>msbotframework4j-build</artifactId>
-  <version>0.1</version>
+  <version>1.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
   <name>Microsoft Bot Framework 4J Build</name>
-
-  <scm>
-    <connection>scm:git:git@github.com:waveaccess/msbotframework4j.git</connection>
-    <developerConnection>scm:git:git@github.com:waveaccess/msbotframework4j.git</developerConnection>
-    <url>git@github.com:waveaccess/msbotframework4j.git</url>
-  </scm>
 
   <licenses>
     <license>
