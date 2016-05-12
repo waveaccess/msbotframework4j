@@ -20,6 +20,7 @@ public interface BotConnectorClient {
    *
    * @param botId  the BotId
    * @param userId the UserId
+   * @return optional BotData object
    */
   Optional<BotData> getUserData(String botId, String userId);
 
@@ -29,6 +30,7 @@ public interface BotConnectorClient {
    * @param botId  the BotId
    * @param userId the UserId
    * @param data   the new BotData
+   * @return optional BotData object
    */
   Optional<BotData> setUserData(String botId, String userId, BotData data);
 
@@ -37,6 +39,7 @@ public interface BotConnectorClient {
    *
    * @param botId          the BotId
    * @param conversationId the ConversationId
+   * @return optional BotData object
    */
   Optional<BotData> getConversationData(String botId, String conversationId);
 
@@ -46,6 +49,7 @@ public interface BotConnectorClient {
    * @param botId          the BotId
    * @param conversationId the ConversationId
    * @param data           the new BotData
+   * @return optional BotData object
    */
   Optional<BotData> setConversationData(String botId, String conversationId, BotData data);
 
@@ -55,6 +59,7 @@ public interface BotConnectorClient {
    * @param botId          the BotId
    * @param conversationId the ConversationId
    * @param userId         the UserId
+   * @return optional BotData object
    */
   Optional<BotData> getPerUserConversationData(String botId, String conversationId, String userId);
 
@@ -65,6 +70,7 @@ public interface BotConnectorClient {
    * @param conversationId the ConversationId
    * @param userId         the UserId
    * @param data           the new BotData
+   * @return optional BotData object
    */
   Optional<BotData> setPerUserConversationData(String botId, String conversationId, String userId, BotData data);
 
@@ -72,7 +78,7 @@ public interface BotConnectorClient {
    * Initiate a new conversation with the user. The important fields are From, To, Text and Language.
    *
    * @param message the message that will initiate a conversation
-   * @return message object
+   * @return optional message object
    */
   Optional<Message> sendMessage(Message message);
 
