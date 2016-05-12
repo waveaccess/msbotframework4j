@@ -5,16 +5,17 @@ decrypt:
   pubring.gpg: "repo/pubring.gpg.asc"
   secring.gpg: "repo/secring.gpg.asc"
 merge:
-  script: mvn clean install
+  script:
+    - mvn clean install --errors --settings ../settings.xml
 deploy:
   commanders:
     - mkanev
-  script: |
-    mvn clean deploy -Prultor --settings /home/r/settings.xml
+  script:
+    - mvn clean deploy -Prultor --errors --settings ../settings.xml
 release:
   commanders:
     - mkanev
-  script: |
-    ./scripts/version ${tag}
-    git commit -am "${tag}"
-    mvn clean deploy -Prelease-ossrh --settings /home/r/settings.xml
+  script:
+    - ./scripts/version ${tag}
+    - git commit -am "${tag}"
+    - mvn clean deploy -Prelease-ossrh --errors --settings ../settings.xml
