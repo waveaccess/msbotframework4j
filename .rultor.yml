@@ -1,0 +1,20 @@
+architect:
+  - mkanev
+decrypt:
+  settings.xml: "repo/settings.xml.asc"
+  pubring.gpg: "repo/pubring.gpg.asc"
+  secring.gpg: "repo/secring.gpg.asc"
+merge:
+  script: mvn clean install
+deploy:
+  commanders:
+    - mkanev
+  script: |
+    mvn clean deploy -Prultor --settings /home/r/settings.xml
+release:
+  commanders:
+    - mkanev
+  script: |
+    ./scripts/version ${tag}
+    git commit -am "${tag}"
+    mvn clean deploy -Prelease-ossrh --settings /home/r/settings.xml

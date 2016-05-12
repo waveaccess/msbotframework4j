@@ -54,7 +54,7 @@
     <maven.plugin.javadoc.version>2.9.1</maven.plugin.javadoc.version>
     <maven.plugin.gpg.version>1.5</maven.plugin.gpg.version>
     <maven.plugin.shade.version>2.4.3</maven.plugin.shade.version>
-    <maven.plugin.release.version>2.5.3</maven.plugin.release.version>
+    <maven.plugin.deploy.version>2.8.2</maven.plugin.deploy.version>
     <!-- Dependencies -->
     <apache.commons.lang3.version>3.4</apache.commons.lang3.version>
     <apache.commons.configuration.version>2.0</apache.commons.configuration.version>
@@ -74,7 +74,8 @@
     <rest.assured.version>2.9.0</rest.assured.version>
     <spark.version>2.3</spark.version>
     <assertj.version>3.3.0</assertj.version>
-    <maven.plugin.nexus-staging.version>1.6.3</maven.plugin.nexus-staging.version>
+    <sonatype.plugin.nexus-staging.version>1.6.3</sonatype.plugin.nexus-staging.version>
+    <codehaus.plugin.versions.version>2.2</codehaus.plugin.versions.version>
   </properties>
 
   <build>
@@ -117,13 +118,21 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>${maven.plugin.release.version}</version>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven.plugin.deploy.version}</version>
         </plugin>
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${maven.plugin.nexus-staging.version}</version>
+          <version>${sonatype.plugin.nexus-staging.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>${codehaus.plugin.versions.version}</version>
+          <configuration>
+            <generateBackupPoms>false</generateBackupPoms>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -146,6 +155,13 @@
       <id>release-ossrh</id>
       <build>
         <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <configuration>
+              <skip>true</skip>
+            </configuration>
+          </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
@@ -179,6 +195,26 @@
                 <phase>verify</phase>
                 <goals>
                   <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>oss.sonatype.org</serverId>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+              <description>${project.version}</description>
+            </configuration>
+            <executions>
+              <execution>
+                <id>deploy-to-sonatype</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
+                  <goal>release</goal>
                 </goals>
               </execution>
             </executions>
