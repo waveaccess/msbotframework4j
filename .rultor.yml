@@ -16,6 +16,8 @@ release:
   commanders:
     - mkanev
   script:
+    - chmod a+x ./scripts/version
+    - chmod a+x ./mvnw
     - ./scripts/version ${tag}
     - git commit -am "${tag}"
     - mvn clean deploy -Prelease-ossrh --errors --settings ../settings.xml
