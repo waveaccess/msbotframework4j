@@ -1,9 +1,9 @@
 architect:
   - mkanev
 decrypt:
-  settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
   secring.gpg: "repo/secring.gpg.asc"
+  settings.xml: "repo/settings.xml.asc"
 merge:
   script:
     - mvn clean install --errors --settings ../settings.xml
