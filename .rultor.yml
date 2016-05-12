@@ -20,4 +20,4 @@ release:
     - chmod a+x ./mvnw
     - ./scripts/version ${tag}
     - git commit -am "${tag}"
-    - mvn clean deploy -Prelease-ossrh --errors --settings ../settings.xml
+    - mvn clean deploy -Psonatype --errors --settings ../settings.xml

@@ -143,7 +143,7 @@
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <useReleaseProfile>false</useReleaseProfile>
-          <releaseProfiles>release-ossrh</releaseProfiles>
+          <releaseProfiles>sonatype</releaseProfiles>
           <goals>deploy</goals>
         </configuration>
       </plugin>
@@ -152,7 +152,7 @@
 
   <profiles>
     <profile>
-      <id>release-ossrh</id>
+      <id>sonatype</id>
       <build>
         <plugins>
           <plugin>
