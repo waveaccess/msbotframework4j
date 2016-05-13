@@ -297,11 +297,6 @@
         <artifactId>msbotframework4j-builder</artifactId>
         <version>0.2-SNAPSHOT</version>
       </dependency>
-      <dependency>
-        <groupId>org.msbotframework4j</groupId>
-        <artifactId>msbotframework4j-sample-echo</artifactId>
-        <version>0.1</version>
-      </dependency>
 
       <dependency>
         <groupId>org.apache.commons</groupId>
