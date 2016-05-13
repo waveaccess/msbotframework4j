@@ -297,37 +297,31 @@
         <artifactId>msbotframework4j-builder</artifactId>
         <version>0.2-SNAPSHOT</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
         <version>${apache.commons.lang3.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-configuration2</artifactId>
         <version>${apache.commons.configuration.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-beanutils</groupId>
         <artifactId>commons-beanutils</artifactId>
         <version>${apache.commons.beanutils.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>${apache.commons.logging.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>19.0</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
@@ -343,14 +337,11 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpcore</artifactId>
         <version>${apache.httpcore.version}</version>
       </dependency>
-
-
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpasyncclient</artifactId>
@@ -362,79 +353,56 @@
         </exclusions>
         <version>${apache.httpasyncclient.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpmime</artifactId>
         <version>${apache.httpclient.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.json</groupId>
         <artifactId>json</artifactId>
         <version>${json.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.mashape.unirest</groupId>
         <artifactId>unirest-java</artifactId>
         <version>${unirest.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
         <version>${jackson.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
         <version>${jackson.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.amazonaws</groupId>
         <artifactId>aws-lambda-java-core</artifactId>
         <version>${aws.lambda.version}</version>
       </dependency>
-
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>${logback.version}</version>
       </dependency>
-
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
       </dependency>
-
-      <dependency>
-        <groupId>com.amazonaws</groupId>
-        <artifactId>aws-java-sdk-dynamodb</artifactId>
-        <version>${aws.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
       <dependency>
         <groupId>com.sparkjava</groupId>
         <artifactId>spark-core</artifactId>
         <version>${spark.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.jayway.restassured</groupId>
         <artifactId>rest-assured</artifactId>
@@ -446,19 +414,16 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>com.jayway.restassured</groupId>
         <artifactId>json-path</artifactId>
         <version>${rest.assured.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
         <version>${assertj.version}</version>
       </dependency>
-
     </dependencies>
   </dependencyManagement>
 
