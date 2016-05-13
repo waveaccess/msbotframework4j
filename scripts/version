@@ -5,4 +5,6 @@
 echo "Bumping version to $1"
 
 ./mvnw versions:set -DnewVersion="$1"
-./mvnw -f msbotframework4j-dependencies/pom.xml versions:set -DnewVersion="$1"
+./mvnw -f msbotframework4j-parent/pom.xml versions:set -DnewVersion="$1"
+
+echo "Finished"

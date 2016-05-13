@@ -11,8 +11,9 @@
   <packaging>pom</packaging>
 
   <name>Microsoft Bot Framework 4J Build</name>
-  <description>MSBotFramework4j project contains libraries that we rely on in our Java-based Bot projects: REST models, logging system, REST API connector and Bot builder.</description>
+  <description>MSBotFramework4j project build POM</description>
   <url>http://msbotframework4j.org</url>
+  <inceptionYear>2016</inceptionYear>
 
   <scm>
     <connection>scm:git:git@github.com:waveaccess/msbotframework4j.git</connection>
@@ -40,20 +41,9 @@
     </developer>
   </developers>
 
-  <distributionManagement>
-    <repository>
-      <id>oss.sonatype.org</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>oss.sonatype.org</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <site>
-      <id>msbotframework4j.org</id>
-      <url>scp://www.msbotframework4j.org</url>
-    </site>
-  </distributionManagement>
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
 
   <profiles>
     <profile>
@@ -95,13 +85,11 @@
         </repository>
       </repositories>
       <modules>
-        <module>msbotframework4j-dependencies</module>
         <module>msbotframework4j-parent</module>
         <module>msbotframework4j-core</module>
         <module>msbotframework4j-logging</module>
         <module>msbotframework4j-connector</module>
         <module>msbotframework4j-builder</module>
-        <module>msbotframework4j-sample</module>
       </modules>
     </profile>
   </profiles>
