@@ -5,7 +5,7 @@
   <parent>
     <artifactId>msbotframework4j-parent</artifactId>
     <groupId>org.msbotframework4j</groupId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.1.3</version>
     <relativePath>../msbotframework4j-parent</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
