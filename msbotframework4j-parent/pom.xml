@@ -72,21 +72,21 @@
     <apache.commons.beanutils.version>1.9.2</apache.commons.beanutils.version>
     <apache.commons.logging.version>1.2</apache.commons.logging.version>
     <apache.httpcore.version>4.4.4</apache.httpcore.version>
-    <apache.httpclient.version>4.5.1</apache.httpclient.version>
+    <apache.httpclient.version>4.5.2</apache.httpclient.version>
     <apache.httpasyncclient.version>4.1.1</apache.httpasyncclient.version>
-    <jackson.version>2.7.3</jackson.version>
-    <json.version>20140107</json.version>
+    <jackson.version>2.7.4</jackson.version>
+    <json.version>20160212</json.version>
     <unirest.version>1.4.9</unirest.version>
-    <slf4j.version>1.7.7</slf4j.version>
+    <slf4j.version>1.7.21</slf4j.version>
     <junit.version>4.12</junit.version>
-    <logback.version>1.1.2</logback.version>
-    <aws.version>1.10.72</aws.version>
+    <logback.version>1.1.7</logback.version>
     <aws.lambda.version>1.1.0</aws.lambda.version>
     <rest.assured.version>2.9.0</rest.assured.version>
-    <spark.version>2.3</spark.version>
-    <assertj.version>3.3.0</assertj.version>
+    <spark.version>2.5</spark.version>
+    <assertj.version>3.4.1</assertj.version>
     <sonatype.plugin.nexus-staging.version>1.6.3</sonatype.plugin.nexus-staging.version>
     <codehaus.plugin.versions.version>2.2</codehaus.plugin.versions.version>
+    <guava.version>19.0</guava.version>
   </properties>
 
   <profiles>
@@ -320,7 +320,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>19.0</version>
+        <version>${guava.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
@@ -345,13 +345,13 @@
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpasyncclient</artifactId>
+        <version>${apache.httpasyncclient.version}</version>
         <exclusions>
           <exclusion>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
           </exclusion>
         </exclusions>
-        <version>${apache.httpasyncclient.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
