@@ -57,15 +57,17 @@
   <properties>
     <java.version>1.7</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Maven deps -->
+    <!-- Plugins deps -->
     <maven.plugin.compiler.version>3.5.1</maven.plugin.compiler.version>
     <maven.plugin.resources.version>2.7</maven.plugin.resources.version>
     <maven.plugin.jar.version>2.6</maven.plugin.jar.version>
-    <maven.plugin.source.version>2.2.1</maven.plugin.source.version>
-    <maven.plugin.javadoc.version>2.9.1</maven.plugin.javadoc.version>
-    <maven.plugin.gpg.version>1.5</maven.plugin.gpg.version>
+    <maven.plugin.source.version>3.0.0</maven.plugin.source.version>
+    <maven.plugin.javadoc.version>2.10.3</maven.plugin.javadoc.version>
+    <maven.plugin.gpg.version>1.6</maven.plugin.gpg.version>
     <maven.plugin.shade.version>2.4.3</maven.plugin.shade.version>
     <maven.plugin.deploy.version>2.8.2</maven.plugin.deploy.version>
+    <sonatype.plugin.nexus-staging.version>1.6.7</sonatype.plugin.nexus-staging.version>
+    <codehaus.plugin.versions.version>2.2</codehaus.plugin.versions.version>
     <!-- Dependencies -->
     <apache.commons.lang3.version>3.4</apache.commons.lang3.version>
     <apache.commons.configuration.version>2.0</apache.commons.configuration.version>
@@ -84,8 +86,6 @@
     <rest.assured.version>2.9.0</rest.assured.version>
     <spark.version>2.5</spark.version>
     <assertj.version>3.4.1</assertj.version>
-    <sonatype.plugin.nexus-staging.version>1.6.3</sonatype.plugin.nexus-staging.version>
-    <codehaus.plugin.versions.version>2.2</codehaus.plugin.versions.version>
     <guava.version>19.0</guava.version>
   </properties>
 
