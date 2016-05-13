@@ -6,7 +6,7 @@
 
   <groupId>org.msbotframework4j</groupId>
   <artifactId>msbotframework4j-build</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1.2</version>
 
   <packaging>pom</packaging>
 

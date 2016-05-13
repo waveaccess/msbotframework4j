@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.msbotframework4j</groupId>
   <artifactId>msbotframework4j-parent</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1.2</version>
   <packaging>pom</packaging>
 
   <name>Microsoft Bot Framework 4J</name>
@@ -280,22 +280,22 @@
       <dependency>
         <groupId>org.msbotframework4j</groupId>
         <artifactId>msbotframework4j-core</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>org.msbotframework4j</groupId>
         <artifactId>msbotframework4j-logging</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>org.msbotframework4j</groupId>
         <artifactId>msbotframework4j-connector</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>org.msbotframework4j</groupId>
         <artifactId>msbotframework4j-builder</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>org.msbotframework4j</groupId>
