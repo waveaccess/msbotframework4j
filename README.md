@@ -15,7 +15,7 @@ Requires JDK 1.7 or higher.
 
 ### Latest Release
 
-The most recent release is MSBotFramework4j 0.1.2, released on May 13, 2016
+The most recent release is MSBotFramework4j 0.1.3, released on May 13, 2016
 
 To add a dependency on MSBotFramework4j using Maven, use the following:
 
@@ -23,7 +23,7 @@ To add a dependency on MSBotFramework4j using Maven, use the following:
 <dependency>
   <groupId>org.msbotframework4j</groupId>
   <artifactId>msbotframework4j-builder</artifactId>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
 </dependency>
 ```
 
@@ -31,10 +31,14 @@ To add a dependency using Gradle:
 
 ```groovy
 dependencies {
-  compile 'org.msbotframework4j:msbotframework4j-builder:0.1.2'
+  compile 'org.msbotframework4j:msbotframework4j-builder:0.1.3'
 }
 ```
 
 ### Snapshots
 
 Snapshots of MSBotFramework4j built from the `develop` branch are available through Maven using version `0.2-SNAPSHOT`.
+
+### Samples
+
+Examples of MSBotFramework4j usage are available in [this repo](https://github.com/mkanev/msbotframework4j-samples)
