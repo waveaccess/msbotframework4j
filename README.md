@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/waveaccess/msbotframework4j.svg?branch=master)](https://travis-ci.org/waveaccess/msbotframework4j)
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.msbotframework4j/msbotframework4j-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.msbotframework4j/msbotframework4j-parent)
 [![Dependencies](https://www.versioneye.com/user/projects/5735d052a0ca350034be7904/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5735d052a0ca350034be7904)
 
 [![Join the chat at https://gitter.im/waveaccess/msbotframework4j](https://badges.gitter.im/waveaccess/msbotframework4j.svg)](https://gitter.im/waveaccess/msbotframework4j?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
