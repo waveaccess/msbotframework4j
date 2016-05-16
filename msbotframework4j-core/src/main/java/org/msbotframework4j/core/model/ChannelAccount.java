@@ -1,7 +1,6 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
 
@@ -10,7 +9,6 @@ import java.util.Objects;
  *
  * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public final class ChannelAccount {
 
   /**
@@ -32,7 +30,7 @@ public final class ChannelAccount {
   /**
    * Is this id a bot?
    */
-  @JsonProperty("isBot")
+  @SerializedName("isBot")
   private boolean bot;
 
   public String getName() {

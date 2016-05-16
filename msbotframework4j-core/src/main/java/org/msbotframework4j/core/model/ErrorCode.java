@@ -1,8 +1,5 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.WordUtils;
 
@@ -30,22 +27,20 @@ public enum ErrorCode {
   }
 
   /**
-   * {@link JsonCreator} method to convert {@link Error} JSON "errorCode" field value to ErrorCode
+   * Creator method to convert {@link Error} JSON "errorCode" field value to ErrorCode
    *
    * @param input {@link Error} JSON "errorCode" field value
    * @return ErrorCode
    */
-  @JsonCreator
   public static ErrorCode deserialize(String input) {
     return StringUtils.isBlank(input) ? null : Holder.CONDENSED_KEY_MAP.get(StringUtils.upperCase(input));
   }
 
   /**
-   * {@link JsonValue} method to convert ErrorCode to {@link Error} JSON "errorCode" field value
+   * Value method to convert ErrorCode to {@link Error} JSON "errorCode" field value
    *
    * @return {@link Error} JSON "errorCode" field value
    */
-  @JsonValue
   public String serialize() {
     return StringUtils.remove(WordUtils.capitalizeFully(name(), '_'), '_');
   }

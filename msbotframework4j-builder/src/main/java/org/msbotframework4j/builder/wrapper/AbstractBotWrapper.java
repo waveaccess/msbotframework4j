@@ -1,10 +1,8 @@
 package org.msbotframework4j.builder.wrapper;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import org.msbotframework4j.builder.BotManager;
 import org.msbotframework4j.builder.bot.Bot;
+import org.msbotframework4j.core.json.SerializerFacade;
 import org.msbotframework4j.core.model.Message;
 import org.msbotframework4j.logging.BotLogger;
 
@@ -17,7 +15,6 @@ import java.io.OutputStream;
  */
 public class AbstractBotWrapper {
 
-  private static final ObjectMapper mapper = new ObjectMapper();
   private final Bot bot;
 
   AbstractBotWrapper() {
@@ -25,7 +22,7 @@ public class AbstractBotWrapper {
   }
 
   Message readMessage(InputStream src) throws IOException {
-    return mapper.readValue(src, Message.class);
+    return SerializerFacade.fromJson(src, Message.class);
   }
 
   Message getReply(Message request, BotLogger logger) {
@@ -33,10 +30,10 @@ public class AbstractBotWrapper {
   }
 
   void writeMessage(OutputStream out, Message value) throws IOException {
-    mapper.writeValue(out, value);
+    SerializerFacade.toJson(out, Message.class, value);
   }
 
-  String writeMessageAsString(Message value) throws JsonProcessingException {
-    return mapper.writeValueAsString(value);
+  String writeMessageAsString(Message value) {
+    return SerializerFacade.toJsonString(Message.class, value);
   }
 }

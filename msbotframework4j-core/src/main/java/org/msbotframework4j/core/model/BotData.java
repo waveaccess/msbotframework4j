@@ -1,13 +1,10 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * Class that represents Bot state in BotConnector persistent storage
  *
  * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public final class BotData extends GenericApiEntity {
 
   /**
