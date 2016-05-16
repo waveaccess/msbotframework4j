@@ -11,7 +11,7 @@
 
 MSBotFramework4j project contains libraries that we rely on in our Java-based Bot projects: REST models, logging system, REST API connector and Bot builder.
 
-Requires JDK 1.7 or higher.
+Requires JDK 1.8 or higher.
 
 ### Latest Release
 

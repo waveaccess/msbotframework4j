@@ -110,7 +110,7 @@ public abstract class AbstractBot implements Bot {
    */
 
   protected Message onBotRemovedFromConversation(Message request, BotLogger logger) {
-    return defaultResponse(request, logger);
+    return request.createReplyMessage("Bye guys!");
   }
 
   /**
