@@ -57,6 +57,7 @@
   <properties>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss</project.build.timestamp.format>
     <!-- Plugins deps -->
     <maven.plugin.compiler.version>3.5.1</maven.plugin.compiler.version>
     <maven.plugin.resources.version>2.7</maven.plugin.resources.version>
@@ -66,6 +67,8 @@
     <maven.plugin.gpg.version>1.6</maven.plugin.gpg.version>
     <maven.plugin.shade.version>2.4.3</maven.plugin.shade.version>
     <maven.plugin.deploy.version>2.8.2</maven.plugin.deploy.version>
+    <maven.plugin.coveralls.version>4.1.0</maven.plugin.coveralls.version>
+    <maven.plugin.jacoco.version>0.7.5.201505241946</maven.plugin.jacoco.version>
     <sonatype.plugin.nexus-staging.version>1.6.7</sonatype.plugin.nexus-staging.version>
     <codehaus.plugin.versions.version>2.2</codehaus.plugin.versions.version>
     <!-- Dependencies -->
@@ -142,7 +145,6 @@
             <configuration>
               <serverId>oss.sonatype.org</serverId>
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <description>${project.version}</description>
             </configuration>
             <executions>
               <execution>
@@ -236,6 +238,27 @@
             <allowSnapshots>true</allowSnapshots>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.eluder.coveralls</groupId>
+          <artifactId>coveralls-maven-plugin</artifactId>
+          <version>${maven.plugin.coveralls.version}</version>
+          <configuration>
+            <timestampFormat>${project.build.timestamp.format}</timestampFormat>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${maven.plugin.jacoco.version}</version>
+          <executions>
+            <execution>
+              <id>prepare-agent</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -254,6 +277,14 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.eluder.coveralls</groupId>
+        <artifactId>coveralls-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
     </plugins>
     <resources>

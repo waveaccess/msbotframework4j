@@ -1,12 +1,20 @@
 language: java
 jdk:
   - oraclejdk8
+
 sudo: false
-install: ./mvnw clean
-script: ./mvnw test
+
 notifications:
   email: false
+
 branches:
   only:
     - master
     - develop
+
+install: ./mvnw clean
+
+script: ./mvnw test
+
+after_success:
+  - ./mvnw clean test jacoco:report coveralls:report
