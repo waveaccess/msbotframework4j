@@ -41,4 +41,4 @@ Snapshots of MSBotFramework4j built from the `develop` branch are available thro
 
 ### Samples
 
-Examples of MSBotFramework4j usage are available in [this repo](https://github.com/mkanev/msbotframework4j-samples)
+Examples of MSBotFramework4j usage are available in [this repo](https://github.com/waveaccess/msbotframework4j-samples)
