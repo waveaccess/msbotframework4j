@@ -1,7 +1,7 @@
 architect:
   - mkanev
 docker:
-  image: "relateiq/oracle-java8"
+  image: jamesdbloom/docker-java8-maven
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
