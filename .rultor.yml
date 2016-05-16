@@ -2,7 +2,7 @@ architect:
   - mkanev
 
 docker:
-  image: "frolvlad/alpine-oraclejdk8"
+  image: "frolvlad/alpine-oraclejdk8:slim"
 
 decrypt:
   settings.xml: "repo/settings.xml.asc"
