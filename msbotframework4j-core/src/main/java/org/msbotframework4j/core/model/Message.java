@@ -1,7 +1,5 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.List;
 import java.util.Objects;
 
@@ -10,7 +8,6 @@ import java.util.Objects;
  *
  * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public final class Message extends GenericApiEntity {
 
   /**

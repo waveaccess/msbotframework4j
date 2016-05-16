@@ -1,8 +1,5 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
@@ -29,22 +26,20 @@ public enum ChannelType {
   }
 
   /**
-   * {@link JsonCreator} method to convert {@link ChannelAccount} JSON "channelId" field value to ChannelType
+   * Creator method to convert {@link ChannelAccount} JSON "channelId" field value to ChannelType
    *
    * @param input {@link ChannelAccount} JSON "channelId" field value
    * @return ChannelType
    */
-  @JsonCreator
   public static ChannelType deserialize(String input) {
     return StringUtils.isBlank(input) ? null : ChannelType.Holder.UPPERCASE_KEY_MAP.get(StringUtils.upperCase(input));
   }
 
   /**
-   * {@link JsonValue} method to convert ChannelType to {@link ChannelAccount} JSON "channelId" field value
+   * Value method to convert ChannelType to {@link ChannelAccount} JSON "channelId" field value
    *
    * @return {@link ChannelAccount} JSON "channelId" field value
    */
-  @JsonValue
   public String serialize() {
     return StringUtils.remove(StringUtils.lowerCase(name()), '_');
   }

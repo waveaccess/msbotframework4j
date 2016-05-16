@@ -1,8 +1,5 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.WordUtils;
 
@@ -53,22 +50,20 @@ public enum MessageType {
   }
 
   /**
-   * {@link JsonCreator} method to convert {@link Message} JSON "type" field value to MessageType
+   * Creator method to convert {@link Message} JSON "type" field value to MessageType
    *
    * @param input {@link Message} JSON "type" field value
    * @return ChannelType
    */
-  @JsonCreator
   public static MessageType deserialize(String input) {
     return StringUtils.isBlank(input) ? null : Holder.CONDENSED_KEY_MAP.get(StringUtils.upperCase(input));
   }
 
   /**
-   * {@link JsonValue} method to convert MessageType to {@link Message} JSON "type" field value
+   * Value method to convert MessageType to {@link Message} JSON "type" field value
    *
    * @return {@link Message} JSON "type" field value
    */
-  @JsonValue
   public String serialize() {
     return StringUtils.remove(WordUtils.capitalizeFully(name(), '_'), '_');
   }

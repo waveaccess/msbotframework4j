@@ -1,8 +1,5 @@
 package org.msbotframework4j.core.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
@@ -77,23 +74,21 @@ public enum Language {
   }
 
   /**
-   * {@link JsonCreator} method to convert {@link Message} JSON "language" field value to Language
+   * Creator method to convert {@link Message} JSON "language" field value to Language
    *
    * @param code {@link Message} JSON "language" field value
    * @return Language
    */
-  @JsonCreator
   public static Language deserialize(String code) {
     return (StringUtils.isBlank(code) ? null : Holder.LANGUAGE_CODE_MAP.get(code));
   }
 
   /**
-   * {@link JsonValue} method to convert Language to {@link Message} JSON "language" field value
+   * Value method to convert Language to {@link Message} JSON "language" field value
    *
    * @return {@link Message} JSON "language" field value
    */
-  @JsonValue
-  public String getCode() {
+  public String serialize() {
     return code;
   }
 
