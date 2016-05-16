@@ -1,23 +1,28 @@
 architect:
   - mkanev
+
 docker:
-  image: "maven:3-jdk-8"
+  image: "frolvlad/alpine-oraclejdk8"
+
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
   secring.gpg: "repo/secring.gpg.asc"
+
 merge:
   commanders:
     - mkanev
   script:
     - chmod a+x ./mvnw
     - ./mvnw clean install --errors --settings ../settings.xml
+
 deploy:
   commanders:
     - mkanev
   script:
     - chmod a+x ./mvnw
     - ./mvnw clean deploy -Prultor --errors --settings ../settings.xml
+
 release:
   commanders:
     - mkanev
