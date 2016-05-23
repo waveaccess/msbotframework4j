@@ -35,11 +35,18 @@ public final class SerializerFacade {
   }
 
   public static <T> T fromJson(InputStream src, Class<T> clazz) throws IOException {
-    return GSON.fromJson(new InputStreamReader(src, StandardCharsets.UTF_8), clazz);
+    InputStreamReader inputStreamReader = new InputStreamReader(src, StandardCharsets.UTF_8);
+    T json = GSON.fromJson(inputStreamReader, clazz);
+    inputStreamReader.close();
+    src.close();
+    return json;
   }
 
   public static void toJson(OutputStream out, Class<?> clazz, Object value) throws IOException {
-    GSON.toJson(value, clazz, new OutputStreamWriter(out, StandardCharsets.UTF_8));
+    OutputStreamWriter outputStreamWriter = new OutputStreamWriter(out, StandardCharsets.UTF_8);
+    GSON.toJson(value, clazz, outputStreamWriter);
+    outputStreamWriter.close();
+    out.close();
   }
 
   public static <T> T fromJsonString(Class<T> clazz, String value) {

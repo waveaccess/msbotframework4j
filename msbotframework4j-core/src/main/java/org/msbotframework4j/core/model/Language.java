@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * Microsoft Translator Language Codes
- *
  * @author Maksim Kanev
  */
 public enum Language {
@@ -65,6 +64,7 @@ public enum Language {
   YUCATEC_MAYA("yua", "Yucatec Maya"), //
   ;
 
+  public static final Language DEFAULT = ENGLISH;
   private final String code, englishName;
 
   Language(String code, String englishName) {
@@ -74,18 +74,33 @@ public enum Language {
   }
 
   /**
-   * Creator method to convert {@link Message} JSON "language" field value to Language
-   *
+   * Creator method to convert {@link Message} JSON "language" field value to Language.
+   * It would reduce input string by dashes in case provider supported language with locale.
    * @param code {@link Message} JSON "language" field value
    * @return Language
    */
   public static Language deserialize(String code) {
-    return (StringUtils.isBlank(code) ? null : Holder.LANGUAGE_CODE_MAP.get(code));
+    if (StringUtils.isBlank(code)) {
+      return DEFAULT;
+    }
+    Language language = Holder.LANGUAGE_CODE_MAP.get(code);
+    if (language != null) {
+      return language;
+    }
+    final char delimiter = '-';
+    int idx;
+    while ((idx = code.lastIndexOf(delimiter)) > 0) {
+      code = code.substring(0, idx);
+      language = Holder.LANGUAGE_CODE_MAP.get(code);
+      if (language != null) {
+        return language;
+      }
+    }
+    return DEFAULT;
   }
 
   /**
    * Value method to convert Language to {@link Message} JSON "language" field value
-   *
    * @return {@link Message} JSON "language" field value
    */
   public String serialize() {

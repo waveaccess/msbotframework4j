@@ -23,7 +23,7 @@ public class StandaloneBotWrapper extends AbstractBotWrapper implements Route {
   @Override
   public Object handle(Request request, Response response) throws Exception {
     Slf4jBotLogger botLogger = new Slf4jBotLogger(LoggerFactory.getLogger(StandaloneBotWrapper.class));
-    Message message = readMessage(request.raw().getInputStream());
+    Message message = readMessage(request.raw().getInputStream(), botLogger);
     Message replyMessage = getReply(message, botLogger);
     response.status(HttpStatus.SC_OK);
     response.type(ContentType.APPLICATION_JSON.getMimeType());

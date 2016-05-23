@@ -21,7 +21,7 @@ public class ServerlessBotWrapper extends AbstractBotWrapper implements RequestS
   @Override
   public void handleRequest(InputStream input, OutputStream output, Context context) throws IOException {
     LambdaBotLogger botLogger = new LambdaBotLogger(context.getLogger());
-    Message message = readMessage(input);
+    Message message = readMessage(input, botLogger);
     Message replyMessage = getReply(message, botLogger);
     writeMessage(output, replyMessage);
   }
