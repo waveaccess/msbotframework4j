@@ -75,7 +75,7 @@ public abstract class AbstractBot implements Bot {
    * @return reply message
    */
   protected Message onPing(Message request, BotLogger logger) {
-    return request.createReplyMessage("Pong");
+    return request.createReplyMessage(PING_RESPONSE_TEXT);
   }
 
   /**
@@ -98,7 +98,7 @@ public abstract class AbstractBot implements Bot {
    */
 
   protected Message onBotAddedToConversation(Message request, BotLogger logger) {
-    return request.createReplyMessage("Hello!");
+    return request.createReplyMessage(BOT_ADDED_TO_CONVERSATION_RESPONSE_TEXT);
   }
 
   /**
@@ -110,7 +110,7 @@ public abstract class AbstractBot implements Bot {
    */
 
   protected Message onBotRemovedFromConversation(Message request, BotLogger logger) {
-    return request.createReplyMessage("Bye guys!");
+    return request.createReplyMessage(BOT_REMOVED_FROM_CONVERSATION_RESPONSE_TEXT);
   }
 
   /**
@@ -146,12 +146,12 @@ public abstract class AbstractBot implements Bot {
    */
 
   protected Message onEndOfConversation(Message request, BotLogger logger) {
-    return request.createReplyMessage("Bye guys!");
+    return request.createReplyMessage(END_OF_CONVERSATION_RESPONSE_TEXT);
   }
 
   private Message defaultResponse(Message request, BotLogger logger) {
     logger.warn("Message type is not supported: " + request.getType());
-    return request.createReplyMessage("This message type is not supported yet. Please contact the bot creator.");
+    return request.createReplyMessage(NOT_SUPPORTED_TYPE_RESPONSE_TEXT);
   }
 
   /**

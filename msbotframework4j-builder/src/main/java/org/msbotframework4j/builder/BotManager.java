@@ -14,6 +14,7 @@ import org.msbotframework4j.builder.exception.BotInstantiationException;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author Maksim Kanev
@@ -32,6 +33,7 @@ public class BotManager {
       FileBasedConfigurationBuilder<FileBasedConfiguration> builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class);
       builder.configure(
           params.fileBased()
+              .setEncoding(StandardCharsets.UTF_8.name())
               .setFileName("bot.properties")
               .setLocationStrategy(new ClasspathLocationStrategy())
       );
