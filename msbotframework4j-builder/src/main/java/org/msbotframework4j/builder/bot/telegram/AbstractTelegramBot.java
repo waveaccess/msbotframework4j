@@ -8,7 +8,7 @@ import org.msbotframework4j.logging.BotLogger;
 /**
  * Base class for Telegram Bots
  *
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class AbstractTelegramBot extends AbstractBot {
 

@@ -13,7 +13,7 @@ import org.msbotframework4j.core.model.Language;
 import java.lang.reflect.Type;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class LanguageSerializer implements JsonSerializer<Language>, JsonDeserializer<Language> {
 

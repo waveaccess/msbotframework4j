@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * Microsoft Translator Language Codes
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public enum Language {
   ARABIC("ar", "Arabic"), //

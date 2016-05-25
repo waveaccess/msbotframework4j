@@ -13,7 +13,7 @@ import org.msbotframework4j.core.model.MessageType;
 import java.lang.reflect.Type;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class MessageTypeSerializer implements JsonSerializer<MessageType>, JsonDeserializer<MessageType> {
 

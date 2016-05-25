@@ -13,7 +13,7 @@ import org.msbotframework4j.core.model.ChannelType;
 import java.lang.reflect.Type;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class ChannelTypeSerializer implements JsonSerializer<ChannelType>, JsonDeserializer<ChannelType> {
 

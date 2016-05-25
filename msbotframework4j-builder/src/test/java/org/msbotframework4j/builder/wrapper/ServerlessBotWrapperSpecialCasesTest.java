@@ -22,7 +22,7 @@ import java.util.Collection;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 @RunWith(Parameterized.class)
 public class ServerlessBotWrapperSpecialCasesTest {

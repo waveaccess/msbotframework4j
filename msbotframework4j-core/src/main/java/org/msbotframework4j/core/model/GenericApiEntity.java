@@ -3,7 +3,7 @@ package org.msbotframework4j.core.model;
 /**
  * Base class for every BotConnector API entity
  *
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class GenericApiEntity {
 

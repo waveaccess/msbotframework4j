@@ -1,7 +1,7 @@
 package org.msbotframework4j.builder.exception;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class BotImplementationNotFound extends RuntimeException {
 

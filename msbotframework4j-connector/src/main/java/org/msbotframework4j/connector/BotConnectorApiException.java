@@ -1,7 +1,7 @@
 package org.msbotframework4j.connector;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class BotConnectorApiException extends RuntimeException {
 

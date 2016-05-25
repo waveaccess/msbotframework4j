@@ -5,7 +5,7 @@ import org.apache.commons.lang3.text.StrBuilder;
 /**
  * Builder for {@link BotLogEntry}
  *
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public interface BotLogEntryBuilder {
 

@@ -12,7 +12,7 @@ import spark.Route;
 import spark.Spark;
 
 /**
- * @author Maksim Kanev
+ * @author <a href="mailto:maksim.kanev@gmail.com">Maksim Kanev</a>
  */
 public class StandaloneBotWrapper extends AbstractBotWrapper implements Route {
 
